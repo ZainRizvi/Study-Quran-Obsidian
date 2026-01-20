@@ -1,2 +1,7 @@
 reference_data/
 .DS_Store
+quran_db/
+out/
+__pycache__/
+*.pyc
+.venv/

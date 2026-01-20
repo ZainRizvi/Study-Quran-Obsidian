@@ -1,0 +1,10 @@
+[project]
+name = "quran-obsidian"
+version = "0.1.0"
+description = "Generate Obsidian-compatible markdown files for Quran verses and surahs with multiple translations"
+readme = "README.md"
+requires-python = ">=3.13"
+dependencies = []
+
+[project.scripts]
+quran-obsidian = "quran_obsidian.cli:main"
