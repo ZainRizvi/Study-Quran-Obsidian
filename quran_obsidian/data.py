@@ -5,7 +5,7 @@ import subprocess
 import sys
 from pathlib import Path
 
-QURAN_DB_REPO = "https://github.com/ZainRizvi/quran_db.git"
+QURAN_DB_REPO = "https://github.com/faisalill/quran_db.git"
 QURAN_DB_DIR = Path(__file__).parent.parent / "quran_db"
 SURAH_METADATA_PATH = Path(__file__).parent / "surah_metadata.json"
 
