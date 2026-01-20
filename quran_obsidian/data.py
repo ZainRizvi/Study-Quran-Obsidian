@@ -47,7 +47,8 @@ def load_translation(name: str) -> dict:
 def load_surah_metadata() -> list[dict]:
     """Load surah metadata (for Meccan/Medinan info)."""
     with open(SURAH_METADATA_PATH, encoding="utf-8") as f:
-        return json.load(f)
+        data = json.load(f)
+    return data["surahs"]
 
 
 def get_surah_type(surah_num: int, metadata: list[dict]) -> str:
