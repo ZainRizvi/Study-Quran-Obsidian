@@ -39,6 +39,28 @@ uv run python -m quran_obsidian.cli generate \
   --translations thestudyquran,arabic,muhammadahmedsamira,aliquliqarai
 ```
 
+## Setting Up with Obsidian
+
+1. Generate the Quran files to a directory inside your Obsidian vault:
+   ```bash
+   uv run python -m quran_obsidian.cli generate \
+     --output /path/to/your/vault/Quran \
+     --translations thestudyquran,arabic,aliquliqarai
+   ```
+
+2. Install the **Dataview** plugin (required):
+   - Open Obsidian Settings → Community plugins → Browse
+   - Search for "Dataview" and install it
+   - Enable the plugin
+
+   The Dataview plugin is required to see the "References" and "Notes Referencing Verse" sections, which dynamically list all notes that link to each surah or verse.
+
+3. Open your vault in Obsidian. The Quran files will be ready to use with:
+   - Wiki-links between surahs and verses (e.g., `[[Quran 2-255]]`)
+   - Aliases for flexible linking (e.g., `[[Surah Al-Baqarah]]`)
+   - Previous/next verse navigation
+   - Backlinks showing all your notes that reference each verse
+
 ## Output Format
 
 ### Surah files
