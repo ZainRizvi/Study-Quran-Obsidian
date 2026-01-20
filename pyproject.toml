@@ -8,3 +8,15 @@ dependencies = []
 
 [project.scripts]
 quran-obsidian = "quran_obsidian.cli:main"
+
+[dependency-groups]
+dev = [
+    "ruff>=0.14.13",
+]
+
+[tool.ruff]
+line-length = 100
+target-version = "py313"
+
+[tool.ruff.lint]
+select = ["E", "F", "I", "UP", "B", "SIM"]

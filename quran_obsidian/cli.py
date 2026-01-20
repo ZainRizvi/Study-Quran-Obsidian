@@ -18,7 +18,7 @@ def cmd_generate(args: argparse.Namespace) -> int:
     invalid = [t for t in translations if t not in available]
     if invalid:
         print(f"Error: Unknown translation(s): {', '.join(invalid)}", file=sys.stderr)
-        print(f"Use 'quran-obsidian list' to see available translations.", file=sys.stderr)
+        print("Use 'quran-obsidian list' to see available translations.", file=sys.stderr)
         return 1
 
     print(f"Generating Quran files to {output_dir}")
@@ -48,7 +48,7 @@ def main() -> int:
     """Main entry point."""
     parser = argparse.ArgumentParser(
         prog="quran-obsidian",
-        description="Generate Obsidian-compatible markdown files for Quran verses and surahs with multiple translations.",
+        description="Generate Obsidian markdown files for Quran verses and surahs.",
     )
     subparsers = parser.add_subparsers(dest="command", help="Available commands")
 
@@ -56,7 +56,7 @@ def main() -> int:
     gen_parser = subparsers.add_parser(
         "generate",
         help="Generate Quran markdown files",
-        description="Generate Obsidian markdown files for all surahs and verses with specified translations.",
+        description="Generate Obsidian markdown files for all surahs and verses.",
     )
     gen_parser.add_argument(
         "--output",
@@ -68,7 +68,7 @@ def main() -> int:
         "--translations",
         "-t",
         required=True,
-        help="Comma-separated list of translations to include (use 'list' command to see available options)",
+        help="Comma-separated list of translations (use 'list' command to see options)",
     )
     gen_parser.set_defaults(func=cmd_generate)
 
