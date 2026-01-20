@@ -24,7 +24,7 @@ This will clone the quran_db repository on first run and list all available tran
 ### Generate Quran files
 
 ```bash
-uv run python -m quran_obsidian.cli generate --output out/quran --translations thestudyquran,arabic,aliquliqarai
+uv run python -m quran_obsidian.cli generate --output out/quran --translations arabic,thestudyquran,aliquliqarai
 ```
 
 This generates:
@@ -36,7 +36,7 @@ This generates:
 ```bash
 uv run python -m quran_obsidian.cli generate \
   --output my-quran-vault \
-  --translations thestudyquran,arabic,muhammadahmedsamira,aliquliqarai
+  --translations arabic,thestudyquran,muhammadahmedsamira,aliquliqarai
 ```
 
 ## Setting Up with Obsidian
@@ -45,7 +45,7 @@ uv run python -m quran_obsidian.cli generate \
    ```bash
    uv run python -m quran_obsidian.cli generate \
      --output /path/to/your/vault/Quran \
-     --translations thestudyquran,arabic,aliquliqarai
+     --translations arabic,thestudyquran,aliquliqarai
    ```
 
 2. Install the **Dataview** plugin (required):
