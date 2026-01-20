@@ -113,13 +113,13 @@ def generate_verse_file(
 
         if trans_name == "arabic":
             # Arabic gets special formatting with <big> tags and no quotes
-            cleaned_text = strip_arabic_verse_markers(verse_text)
+            cleaned_text = strip_arabic_verse_markers(verse_text).strip()
             sources_parts.append(
                 f"##### {display_name}\n<big><big><big>{cleaned_text}</big></big></big>\n--{citation}"
             )
         else:
             # Regular translations get quotes and decode HTML entities
-            cleaned_text = decode_html_entities(verse_text)
+            cleaned_text = decode_html_entities(verse_text).strip()
             sources_parts.append(f'##### {display_name}\n"{cleaned_text}"  --{citation}')
 
     sources_str = "\n\n".join(sources_parts)
