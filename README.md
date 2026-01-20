@@ -50,6 +50,11 @@ You can now:
 - Link to surahs: `[[Surah al-Baqarah]]` or `[[1 - Surah al-Fatihah]]`
 - See which of your notes reference each verse (via backlinks and Dataview)
 - Navigate between verses with prev/next links
+- Embed a specific translation directly in your notes:
+  ```
+  ![[Quran 2-255#Arabic]]
+  ![[Quran 2-255#The Study Quran]]
+  ```
 
 ## Choosing Translations
 
