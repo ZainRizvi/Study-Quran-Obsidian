@@ -102,7 +102,7 @@ generate_quran_files(Path('test_out'), ['arabic', 'thestudyquran'])
 "
 
 # Full generation
-uv run quran-obsidian generate -o out/quran -t thestudyquran,arabic,aliquliqarai
+uv run python -m quran_obsidian.cli generate -o out/quran -t thestudyquran,arabic,aliquliqarai
 ```
 
 ## Reference Data

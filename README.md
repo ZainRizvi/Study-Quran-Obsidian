@@ -7,12 +7,8 @@ Generate Obsidian-compatible markdown files for Quran verses and surahs with mul
 Requires Python 3.13+ and [uv](https://docs.astral.sh/uv/).
 
 ```bash
-# Clone the repository
 git clone https://github.com/ZainRizvi/quran-obsidian.git
 cd quran-obsidian
-
-# Install with uv
-uv sync
 ```
 
 ## Usage
@@ -20,7 +16,7 @@ uv sync
 ### List available translations
 
 ```bash
-uv run quran-obsidian list
+uv run python -m quran_obsidian.cli list
 ```
 
 This will clone the quran_db repository on first run and list all available translations (70+).
@@ -28,7 +24,7 @@ This will clone the quran_db repository on first run and list all available tran
 ### Generate Quran files
 
 ```bash
-uv run quran-obsidian generate --output out/quran --translations thestudyquran,arabic,aliquliqarai
+uv run python -m quran_obsidian.cli generate --output out/quran --translations thestudyquran,arabic,aliquliqarai
 ```
 
 This generates:
@@ -38,7 +34,7 @@ This generates:
 ### Example with multiple translations
 
 ```bash
-uv run quran-obsidian generate \
+uv run python -m quran_obsidian.cli generate \
   --output my-quran-vault \
   --translations thestudyquran,arabic,muhammadahmedsamira,aliquliqarai
 ```
