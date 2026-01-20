@@ -24,9 +24,14 @@ def decode_html_entities(text: str) -> str:
     return html.unescape(text)
 
 
+def normalize_transliteration(name: str) -> str:
+    """Replace backticks with apostrophes in transliterated names."""
+    return name.replace("`", "'")
+
+
 def format_surah_name_for_file(transliterated_name: str, surah_num: int) -> str:
     """Format surah name for file naming: '1 - Surah al-Fatihah'."""
-    return f"{surah_num} - Surah {transliterated_name}"
+    return f"{surah_num} - Surah {normalize_transliteration(transliterated_name)}"
 
 
 def generate_surah_file(
@@ -36,7 +41,7 @@ def generate_surah_file(
 ) -> str:
     """Generate the markdown content for a surah file."""
     surah_data = arabic_data[str(surah_num)]
-    transliterated_name = surah_data["SurahTransliteratedName"]
+    transliterated_name = normalize_transliteration(surah_data["SurahTransliteratedName"])
     arabic_name = surah_data["SurahArabicName"]
     english_name = surah_data["SurahEnglishNames"]
     total_verses = len(surah_data["Ayahs"])
@@ -191,7 +196,7 @@ def generate_quran_files(
     total_surahs = 114
     for surah_num in range(1, total_surahs + 1):
         surah_info = arabic_data[str(surah_num)]
-        transliterated_name = surah_info["SurahTransliteratedName"]
+        transliterated_name = normalize_transliteration(surah_info["SurahTransliteratedName"])
         total_verses = len(surah_info["Ayahs"])
 
         # Generate surah file
