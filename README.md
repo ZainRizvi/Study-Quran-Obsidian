@@ -38,10 +38,13 @@ The first run will download the translation database automatically.
 
 After generating the files:
 
-1. **Install the Dataview plugin** (required for the references feature):
+1. **Install the Dataview plugin** (required for the backlinks/references feature):
    - Obsidian Settings → Community plugins → Browse
    - Search for "Dataview" and install it
    - Enable the plugin
+  
+2. **Install [Custom File Explorer sorting](https://github.com/SebastianMC/obsidian-custom-sort)/ plugin** (optional):
+   - Sorts the verses and surah files in order without having to prepend the surah/verse numbers with zeros
 
 2. That's it. Open your vault and start exploring.
 
